@@ -5,6 +5,7 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.DayOfWeek;
 import java.util.*;
 
 @Data
@@ -21,6 +22,5 @@ public class Teacher{
 	private String password;
 	private String phone;
 	private List<Subject> subjectList;
-	private Map<Date,List<Integer>> workTimeOptions;
-
+	private Map<DayOfWeek, int[]> schedule;
 }

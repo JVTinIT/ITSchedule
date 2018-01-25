@@ -11,9 +11,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Student{
 	@Id
 	private String id;
-
-	private String email;
 	private String name;
 	private String surname;
 	private Group group;
+	private String email;
+	private String phoneNumber;
+	private Status status;
+	private FormOfPayment formOfPayment;
 }

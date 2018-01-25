@@ -11,8 +11,10 @@ import java.util.List;
 @AllArgsConstructor
 @Document
 public class Subject{
+	@Id
+	private String id;
 	private String name;
-	private int numberOf;
+	private int numberOfLessons;
 	private List<Teacher> teachers;
-
+	private TypeOfSubject typeOfSubject;
 }
