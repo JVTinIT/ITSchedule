@@ -16,4 +16,11 @@ public class Group{
 	private String name;
 	private Course course;
 	private List<Student> students;
+
+	public Group(String id, String name, Course course, List<Student> students){
+		this.id = id;
+		this.name = name;
+		this.course = course;
+		this.students = students;
+	}
 }
