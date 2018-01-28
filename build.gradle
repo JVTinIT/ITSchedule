@@ -6,9 +6,12 @@ buildscript {
 		mavenCentral()
 		maven { url "https://repo.spring.io/snapshot" }
 		maven { url "https://repo.spring.io/milestone" }
+		maven {url "https://plugins.gradle.org/m2/"}
+
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath "gradle.plugin.org.tekgenesis:gradle-plugin:0.5.14"
 	}
 }
 
@@ -16,6 +19,11 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: "tekgenesis.bootstrap"
+
+plugins {
+	id "tekgenesis.bootstrap" version "0.5.14"
+}
 
 group = 'com'
 version = '0.0.1-SNAPSHOT'
