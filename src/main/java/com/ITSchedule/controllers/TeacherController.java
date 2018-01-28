@@ -15,9 +15,19 @@ public class TeacherController{
     @Autowired
     private TeacherService teacherService;
 
+    @PostMapping(value = "/save", consumes = "application/json")
+    public Teacher save(@RequestBody Teacher teacher) {
+        return teacherService.save(teacher);
+    }
+
     @GetMapping("/{id}")
     public Teacher getOne(@PathVariable String id) {
         return teacherService.getById(id);
+    }
+
+    @DeleteMapping("/del/{id}")
+    public boolean delete(@PathVariable String id) {
+        return teacherService.deleteById(id);
     }
 
     @GetMapping("/all")
@@ -25,11 +35,6 @@ public class TeacherController{
         return teacherService.getAll();
     }
 
-    @RequestMapping(value = "/new",
-                    method = RequestMethod.POST,
-                    consumes = "application/json")
-    public Teacher add(@RequestBody Teacher teacher) {
-        return teacherService.addTeacher(teacher);
-    }
+
 
 }

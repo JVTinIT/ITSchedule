@@ -1,10 +1,10 @@
 package com.ITSchedule.repositories;
 
+import com.ITSchedule.models.Course;
 import org.springframework.data.mongodb.repository.MongoRepository;
-import com.ITSchedule.models.Subject;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SubjectRepository extends MongoRepository<Subject,String>{
-	Subject getById(String id);
+public interface CourseRepository extends MongoRepository<Course,String>{
+	Course getById(String id);
 }

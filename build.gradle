@@ -34,4 +34,9 @@ dependencies {
 	runtime('org.springframework.boot:spring-boot-devtools')
 	compileOnly 'org.projectlombok:lombok:1.16.20'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+	compile group: 'joda-time', name: 'joda-time', version: '2.9.9'
+
+
+
 }
