@@ -8,7 +8,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
 @Document
 public class Group{
 	@Id
@@ -17,8 +16,7 @@ public class Group{
 	private Course course;
 	private List<Student> students;
 
-	public Group(String id, String name, Course course, List<Student> students){
-		this.id = id;
+	public Group(String name, Course course, List<Student> students){
 		this.name = name;
 		this.course = course;
 		this.students = students;

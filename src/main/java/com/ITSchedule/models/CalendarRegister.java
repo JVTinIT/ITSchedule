@@ -8,4 +8,12 @@ public class CalendarRegister{
 	private int numberLesson;
 	private Group group;
 	private Teacher teacher;
+
+	public CalendarRegister(Date date, Subject subject, int numberLesson, Group group, Teacher teacher){
+		this.date = date;
+		this.subject = subject;
+		this.numberLesson = numberLesson;
+		this.group = group;
+		this.teacher = teacher;
+	}
 }

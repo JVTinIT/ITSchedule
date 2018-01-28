@@ -2,13 +2,12 @@ package com.ITSchedule.models;
 
 import org.springframework.data.annotation.Id;
 
-public class Classroom {
+public class ClassRoom {
     @Id
     private String id;
     private int numbOfPlaces;
 
-    public Classroom(String id, int numbOfPlaces){
-        this.id = id;
+    public ClassRoom(int numbOfPlaces){
         this.numbOfPlaces = numbOfPlaces;
     }
 }

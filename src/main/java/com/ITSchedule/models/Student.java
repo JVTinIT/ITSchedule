@@ -6,7 +6,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@AllArgsConstructor
 @Document
 public class Student{
 	@Id
@@ -18,4 +17,14 @@ public class Student{
 	private String phoneNumber;
 	private Status status;
 	private FormOfPayment formOfPayment;
+
+	public Student(String name, String surname, Group group, String email, String phoneNumber, Status status, FormOfPayment formOfPayment){
+		this.name = name;
+		this.surname = surname;
+		this.group = group;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+		this.status = status;
+		this.formOfPayment = formOfPayment;
+	}
 }

@@ -8,7 +8,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
 @Document
 
 public class GroupOfSubjects {
@@ -16,4 +15,9 @@ public class GroupOfSubjects {
 	private String id;
 	private String name;
 	private List<Subject> subjects;
+
+	public GroupOfSubjects(String name, List<Subject> subjects){
+		this.name = name;
+		this.subjects = subjects;
+	}
 }
